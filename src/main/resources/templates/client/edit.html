@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Изменить клиента</title>
+</head>
+<body>
+<form action="#" th:action="@{/client/edit}" th:object="${client}" method="post">
+  <p>
+    <label for="id">ID</label>
+    <input type="hidden" th:field="${client.id}" id="id" placeholder="id">
+  </p>
+  <p>
+    <label for="lastName">Фамилия</label>
+    <input type="text" th:field="${client.lastName}" id="lastName" placeholder="Фамилия">
+  </p>
+  <p>
+    <label for="firstName">Имя</label>
+    <input type="text" th:field="${client.firstName}" id="firstName" placeholder="Имя">
+  </p>
+  <p>
+    <label for="secondName">Отчество</label>
+    <input type="text" th:field="${client.secondName}" id="secondName" placeholder="Фамилия">
+  </p>
+  <p>
+    <label for="familyStatus">Семейное положение</label>
+    <input type="text" th:field="${client.familyStatus}" id="familyStatus" placeholder="Семейное положение">
+  </p>
+  <p>
+    <label for="placeOfResidence">Адрес регистрации</label>
+    <input type="text" th:field="${client.placeOfResidence}" id="placeOfResidence" placeholder="Адрес регистрации">
+  </p>
+  <p>
+    <label for="phoneNumber">Номер телефона</label>
+    <input type="number" th:field="${client.phoneNumber}" id="phoneNumber" placeholder="Номер телефона">
+  </p>
+  <p>
+    <label for="jobTitle">Должность</label>
+    <input type="text" th:field="${client.jobTitle}" id="jobTitle" placeholder="Должность">
+  </p>
+  <p>
+    <label for="workPeriod">Период работы</label>
+    <input type="text" th:field="${client.workPeriod}" id="workPeriod" placeholder="Период работы">
+  </p>
+  <p>
+    <label for="nameOfTheOrganization">Название организации</label>
+    <input type="text" th:field="${client.nameOfTheOrganization}" id="nameOfTheOrganization" placeholder="Название организации">
+  </p>
+  <p>
+    <label for="passportSeries">Серия паспорта</label>
+    <input type="number" th:field="${client.passportSeries}" id="passportSeries" placeholder="Серия паспорта">
+  </p>
+  <p>
+    <label for="passportNumber">Номер паспорта</label>
+    <input type="number" th:field="${client.passportNumber}" id="passportNumber" placeholder="Номер паспорта">
+  </p>
+  <input type="submit" value="Редактировать">
+</form>
+</body>
+</html>

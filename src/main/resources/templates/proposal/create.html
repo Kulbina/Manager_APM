@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Заявки</title>
+</head>
+<body>
+<form action="#" th:action="@{/proposal/create}" th:object="${proposalCreateObject}" method="post">
+  <p>
+    <label for="term">Срок</label>
+    <input type="text" th:field="${proposalCreateObject.proposal.term}" id="term" placeholder="Срок">
+  </p>
+  <p>
+    <label for="requestedAmount">Запрошенная сумма</label>
+    <input type="text" th:field="${proposalCreateObject.proposal.requestedAmount}" id="requestedAmount" placeholder="Запрошенная сумма">
+  </p>
+  <p>
+    <label for="approvedAmount">Одобренная сумма</label>
+    <input type="text" th:field="${proposalCreateObject.proposal.approvedAmount}" id="approvedAmount" placeholder="Одобренная сумма">
+  </p>
+  <p>
+    <label for="status">Статус</label>
+    <input type="text" th:field="${proposalCreateObject.proposal.status}" id="status" placeholder="Статус">
+    <input type="hidden" th:field="${proposalCreateObject.clientId}">
+  </p>
+  <input type="submit" value="Создать">
+</form>
+</body>
+</html>

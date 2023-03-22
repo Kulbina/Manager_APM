@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить клиента</title>
+</head>
+<body>
+<form action="#" th:action="@{/client/create}" th:object="${client}" method="post">
+    <p>
+        <label for="lastName">Фамилия</label>
+        <input type="text" th:field="${client.lastName}" id="lastName">
+    </p>
+    <p>
+        <label for="firstName">Имя</label>
+        <input type="text" th:field="${client.firstName}" id="firstName">
+    </p>
+    <p>
+        <label for="secondName">Отчество</label>
+        <input type="text" th:field="${client.secondName}" id="secondName">
+    </p>
+    <p>
+        <label for="familyStatus">Семейное положение</label>
+        <input type="text" th:field="${client.familyStatus}" id="familyStatus">
+    </p>
+    <p>
+        <label for="placeOfResidence">Адрес регистрации</label>
+        <input type="text" th:field="${client.placeOfResidence}" id="placeOfResidence">
+    </p>
+    <p>
+        <label for="phoneNumber">Номер телефона</label>
+        <input type="number" th:field="${client.phoneNumber}" id="phoneNumber">
+    </p>
+    <p>
+        <label for="jobTitle">Должность</label>
+        <input type="text" th:field="${client.jobTitle}" id="jobTitle">
+    </p>
+    <p>
+        <label for="workPeriod">Период работы</label>
+        <input type="text" th:field="${client.workPeriod}" id="workPeriod">
+    </p>
+    <p>
+        <label for="nameOfTheOrganization">Название организации</label>
+        <input type="text" th:field="${client.nameOfTheOrganization}" id="nameOfTheOrganization">
+    </p>
+    <p>
+        <label for="passportSeries">Серия паспорта</label>
+        <input type="number" th:field="${client.passportSeries}" id="passportSeries">
+    </p>
+    <p>
+        <label for="passportNumber">Номер паспорта</label>
+        <input type="number" th:field="${client.passportNumber}" id="passportNumber">
+    </p>
+    <input type="submit" value="Создать">
+</form>
+</body>
+</html>

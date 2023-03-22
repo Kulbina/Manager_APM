@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01
+Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Список заявок</title>
+</head>
+<body>
+<div align="center">
+    <h2 th:text="${name}"></h2>
+    <h3><a th:href="@{'/proposal/create/' + ${client.id}}">Добавить новую заявку</a></h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Статус</th>
+            <th>Срок</th>
+            <th>Запрашиваемая сумма</th>
+            <th>Одобренная сумма</th>
+        </tr>
+        <th:block th:each="proposal : ${proposals}">
+            <tr>
+                <td th:text="${proposal.id}"></td>
+                <td th:text="${proposal.status}"></td>
+                <td th:text="${proposal.term}"></td>
+                <td th:text="${proposal.requestedAmount}"></td>
+                <td th:text="${proposal.approvedAmount}"></td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+</body>
+</html>
